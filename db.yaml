@@ -1,0 +1,12 @@
+- name: Cuphead
+  year: 2017
+  save:
+  - path: [app-data-roaming, Cuphead]
+    type: whole-folder
+- name: SteamWorld Dig 2
+  year: 2017
+  save:
+  - path: [my-games, SteamWorld Dig 2]
+    type: regex
+    regex: savegame_00[012].*
+  

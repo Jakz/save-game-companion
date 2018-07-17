@@ -9,7 +9,9 @@ public class MappedPath
 {
   private enum Parent
   {
-    DOCUMENTS_FOLDER
+    DOCUMENTS_FOLDER,
+    MY_GAMES_FOLDER,
+    APPDATA_ROAMING
   };
   
   private final Parent parent;
@@ -40,5 +42,17 @@ public class MappedPath
   {
     return new MappedPath(Parent.DOCUMENTS_FOLDER, subPath);
   }
+  
+  public static MappedPath ofMyGamesFolder(Path subPath)
+  {
+    return new MappedPath(Parent.MY_GAMES_FOLDER, subPath);
+  }
+  
+  public static MappedPath ofAppDataRoaming(Path subPath)
+  {
+    return new MappedPath(Parent.APPDATA_ROAMING, subPath);
+  }
+  
+
 }
 
